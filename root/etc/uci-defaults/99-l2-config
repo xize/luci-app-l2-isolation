@@ -1,4 +1,6 @@
 #!/bin/sh
+[ -e /etc/config/isolation ] && return 0
+
 touch /etc/config/isolation
 uci add isolation global
 uci set isolation.@global[0].enabled=0
