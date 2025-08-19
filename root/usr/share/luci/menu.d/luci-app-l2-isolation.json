@@ -1,5 +1,5 @@
 {
-  "admin/services/l2-isolation": {
+  "admin/network/l2-isolation": {
     "title": "L2 Isolation",
     "order": 60,
     "action": {
