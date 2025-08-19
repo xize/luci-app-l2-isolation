@@ -3,7 +3,7 @@
     "title": "L2 Isolation",
     "order": 60,
     "action": {
-       "type": "firstchild",
+       "type": "view",
        "path": "l2-isolation/index"
     },
     "depends": {
