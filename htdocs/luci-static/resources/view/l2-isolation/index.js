@@ -1,6 +1,7 @@
 'use strict';
 'require view';
 'require form';
+'require fs';
 'require tools.widgets as widgets'
 
 // Project code format is tabs, not spaces
@@ -26,5 +27,5 @@ return view.extend({
                 o.editable = true;
 
                 return m.render();
-        },
+        },handleSave: null
 });
