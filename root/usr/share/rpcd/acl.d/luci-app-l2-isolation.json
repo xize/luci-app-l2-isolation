@@ -2,6 +2,9 @@
 	"luci-app-l2-isolation": {
 		"description": "uci access to l2 isolation",
 		"read": {
+			"file": {
+				"/usr/bin/set_isolation": [ "exec" ]
+			},
 			"uci": [ "isolation" ]
 		},
 		"write": {
