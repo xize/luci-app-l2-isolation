@@ -1,0 +1,13 @@
+{
+  "admin/network/l2-isolation/": {
+    "title": "L2 Isolation",
+    "order": 60,
+    "action": {
+       "type": "view",
+       "path": "l2-isolation/index.js"
+    },
+    "depends": {
+      "acl": [ "luci-app-l2-isolation" ]
+    }
+  }
+}

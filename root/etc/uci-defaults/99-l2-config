@@ -1,0 +1,9 @@
+#!/bin/sh
+
+touch /etc/config/isolation
+uci set isolation.enabled=enabled
+uci set isolation.networks=networks
+uci commit isolation
+
+
+return 0
