@@ -1,15 +1,11 @@
 {
-  "luci-app-l2-isolation": {
-    "description": "Grant UCI and RPC access to LuCI app luci-app-l2-isolation",
-    "read": {
-      "uci": [
-        "isolation"
-      ]
-    },
-    "write": {
-      "uci": [
-        "isolation"
-      ]
-    }
-  }
+	"luci-app-l2-isolation": {
+		"description": "uci access to l2 isolation",
+		"read": {
+			"uci": [ "isolation" ]
+		},
+		"write": {
+			"uci": [ "isolation" ]
+		}
+	}
 }

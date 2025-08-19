@@ -1,9 +1,9 @@
 {
-  "admin/network/l2-isolation/": {
+  "admin/services/l2-isolation": {
     "title": "L2 Isolation",
     "order": 60,
     "action": {
-       "type": "view",
+       "type": "firstchild",
        "path": "l2-isolation/index.js"
     },
     "depends": {
