@@ -4,7 +4,7 @@
     "order": 60,
     "action": {
        "type": "firstchild",
-       "path": "l2-isolation/index.js"
+       "path": "l2-isolation/index"
     },
     "depends": {
       "acl": [ "luci-app-l2-isolation" ]
