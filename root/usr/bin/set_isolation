@@ -1,0 +1,31 @@
+#!/bin/sh
+
+. /lib/functions.sh
+
+if [ "$1" -eq "reset" ];
+then
+    ebtables -F
+fi
+
+handle_global() {
+        local config="$1"
+
+        config_list_foreach "$config" networks handle_networks
+
+}
+
+
+handle_networks() {
+        local dsaface="$1"
+        [ -z "$dsaface" ] && exit 0;
+        logger -t "l2-isolation" "adding ebtables isolation rule for $dsaface"
+        ebtables -A FORWARD --logical-in "$dsaface" -j DROP
+}
+
+logger -t "l2-isolation" "clearing ebtables before we continue."
+ebtables -F
+
+config_load isolation
+config_foreach handle_global global test
+
+exit 0
