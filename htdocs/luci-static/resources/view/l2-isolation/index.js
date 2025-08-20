@@ -29,8 +29,11 @@ return view.extend({
 
                 return m.render();
         }, handleSaveApply: function() {
-                this.handleSave();
-                ui.changes.apply(true); //this needs a promise.
-                fs.exec("set_isolation");
+                
+                this.handleSave().then(function() {
+                        ui.changes.apply();
+                        fs.exec("set_isolation");
+                });
+
         }
 });
