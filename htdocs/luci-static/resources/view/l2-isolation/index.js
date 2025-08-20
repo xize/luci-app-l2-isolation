@@ -2,8 +2,8 @@
 'require view';
 'require form';
 'require fs';
-'require tools.widgets as widgets'
-'require ui'
+'require tools.widgets as widgets';
+'require ui';
 
 // Project code format is tabs, not spaces
 return view.extend({
