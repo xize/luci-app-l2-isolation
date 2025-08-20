@@ -3,6 +3,7 @@
 'require form';
 'require fs';
 'require tools.widgets as widgets'
+'require ui'
 
 // Project code format is tabs, not spaces
 return view.extend({
@@ -22,10 +23,14 @@ return view.extend({
                 o = s.option(widgets.DeviceSelect, 'networks', _('Select DSA-only Network(s) in order to be client to client side isolated.'),
                         _('isolate dsa devices on level 2.'));
                 o.placeholder = 'placeholder';
-				o.multiple=true;
+                                o.multiple=true;
                 o.rmempty = false;
                 o.editable = true;
 
                 return m.render();
-        },handleSave: null
+        }, handleSaveApply: function() {
+                this.handleSave();
+                ui.changes.apply(true); //this needs a promise.
+                fs.exec("set_isolation");
+        }
 });
