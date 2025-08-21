@@ -28,12 +28,5 @@ return view.extend({
                 o.editable = true;
 
                 return m.render();
-        }, handleSaveApply: function() {
-                
-                this.handleSave().then(function() {
-                        ui.changes.apply();
-                        fs.exec("set_isolation");
-                });
-
         }
 });
