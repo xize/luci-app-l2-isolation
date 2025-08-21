@@ -3,7 +3,6 @@
 . /lib/functions.sh
 
 enabled=$(uci -q get isolation.@global[0].enabled)
-echo "$enabled"
 
 handle_global() {
         local config="$1"
