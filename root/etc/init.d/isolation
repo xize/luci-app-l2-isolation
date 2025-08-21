@@ -11,7 +11,6 @@ start_service() {
         procd_set_param pidfile /var/run/isolation.pid
         procd_set_param term_timeout 1
         procd_set_param stdout 1
-        procd_set_param respawn 150 10 10
         procd_close_instance
 }
  
