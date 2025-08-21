@@ -4,7 +4,7 @@
 include $(TOPDIR)/rules.mk
 
 LUCI_TITLE:=LuCI support for l2 isolation
-LUCI_DEPENDS:=+luci-base +ebtables-nft
+LUCI_DEPENDS:=+luci-base +ebtables-nft +l2-isolation
 
 PKG_LICENSE:=GPL-2.0
 PKG_MAINTAINER:=Guido Lucassen <dev@anonymous-identity.com>
